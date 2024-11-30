@@ -83,7 +83,7 @@ public class PlayerController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> save(@PathVariable Long id, @RequestBody PlayerDTO playerDTO) {
+    public ResponseEntity<?> updatePlayer(@PathVariable Long id, @RequestBody PlayerDTO playerDTO) {
         Optional<Player> playerOptional = playerService.findById(id);
 
         if (playerOptional.isPresent()) {
